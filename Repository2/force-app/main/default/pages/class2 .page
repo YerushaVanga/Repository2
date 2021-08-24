@@ -1,0 +1,21 @@
+<apex:page controller="map_1">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Objects:</apex:outputLabel>
+                    <apex:selectList value="{!selected}">
+                        <apex:selectOptions value="{!Objects}"></apex:selectOptions>
+                        <apex:actionSupport event="onchange" action="{!search}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Fields:</apex:outputLabel>
+                    <apex:selectList >
+                        <apex:selectOptions value="{!Fields}"></apex:selectOptions>     
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>                               
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

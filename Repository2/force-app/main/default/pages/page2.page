@@ -1,0 +1,14 @@
+<apex:page standardController="opportunity" extensions="Extensions_opty_delete2" recordSetVar="items">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Massdelete" action="{!massdelete}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!optylist}" var="op">
+                <apex:column value="{!op.name}"/>
+                      <apex:column value="{!op.stagename}"/>
+                      <apex:column value="{!op.closedate}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
